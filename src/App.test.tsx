@@ -7,3 +7,11 @@ test('renders learn react link', () => {
   const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+// import React from 'react';
+import { shallow } from 'enzyme';
+// import App from '../App';
+test('renders the component', () => {
+  const component = shallow(<App />);
+  expect(component).toMatchSnapshot();
+});
